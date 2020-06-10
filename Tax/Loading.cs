@@ -71,8 +71,8 @@ namespace Tax
                 connection.Open();
                 SqlCommand command = new SqlCommand(sql, connection);
                 command.ExecuteNonQuery();
-                Console.WriteLine(Task.CurrentId + " поток, сделал запись в базу" + id + " " + fio);
-                File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + @"\log.txt", Task.CurrentId + " поток, сделал запись в базу" + id + " " + fio + "\n", Encoding.UTF8);
+                Console.WriteLine(Task.CurrentId + " поток, сделал запись в базу " + id + " " + fio + " " + city + " " + email + " " + phone + " " + date);
+                File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + @"\log.txt", Task.CurrentId + " поток, сделал запись в базу " + id + " " + fio + " " + city + " " + email + " " + phone + " " + date + "\n", Encoding.UTF8);
             }
 
         }
